@@ -1,11 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gen Z Tech - Bringing Quality to Your Comfort Zone</title>
-    <link rel="icon" type="image/png" href="favicon.png">
+     <link rel="icon" type="image/png" href="favicon.png">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <script>
@@ -25,35 +24,35 @@
     </script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
-
+        
         body {
             font-family: 'Poppins', sans-serif;
             background-color: #f8fafc;
             scroll-behavior: smooth;
             overflow-x: hidden;
         }
-
+        
         .hero-pattern {
-            background: radial-gradient(circle, rgba(0, 191, 255, 0.15) 0%, rgba(243, 244, 246, 0) 70%);
+            background: radial-gradient(circle, rgba(0,191,255,0.15) 0%, rgba(243,244,246,0) 70%);
         }
-
+        
         .card-hover {
             transition: all 0.3s ease;
         }
-
+        
         .card-hover:hover {
             transform: translateY(-5px);
             box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
         }
-
+        
         .product-img {
             transition: all 0.4s ease;
         }
-
+        
         .product-img:hover {
             transform: scale(1.05);
         }
-
+        
         .nav-link::after {
             content: '';
             display: block;
@@ -62,11 +61,11 @@
             background: #00BFFF;
             transition: width 0.3s;
         }
-
+        
         .nav-link:hover::after {
             width: 100%;
         }
-
+        
         .cart-badge {
             position: absolute;
             top: -8px;
@@ -77,237 +76,207 @@
             padding: 2px 8px;
             font-size: 0.75rem;
         }
-
+        
         .animate-bounce-slow {
             animation: bounce-slow 3s infinite;
         }
-
+        
         @keyframes bounce-slow {
-
-            0%,
-            100% {
+            0%, 100% {
                 transform: translateY(0);
             }
-
             50% {
                 transform: translateY(-10px);
             }
         }
-
+        
         .glow {
             box-shadow: 0 0 15px rgba(0, 191, 255, 0.5);
         }
-
+        
         /* New Animations */
         @keyframes float {
-
-            0%,
-            100% {
+            0%, 100% {
                 transform: translateY(0);
             }
-
             50% {
                 transform: translateY(-10px);
             }
         }
-
+        
         @keyframes fadeIn {
             from {
                 opacity: 0;
                 transform: translateY(20px);
             }
-
             to {
                 opacity: 1;
                 transform: translateY(0);
             }
         }
-
+        
         @keyframes slideInLeft {
             from {
                 opacity: 0;
                 transform: translateX(-50px);
             }
-
             to {
                 opacity: 1;
                 transform: translateX(0);
             }
         }
-
+        
         @keyframes slideInRight {
             from {
                 opacity: 0;
                 transform: translateX(50px);
             }
-
             to {
                 opacity: 1;
                 transform: translateX(0);
             }
         }
-
+        
         @keyframes pulse {
-
-            0%,
-            100% {
+            0%, 100% {
                 transform: scale(1);
                 box-shadow: 0 0 0 0 rgba(0, 191, 255, 0.4);
             }
-
             50% {
                 transform: scale(1.05);
                 box-shadow: 0 0 0 15px rgba(0, 191, 255, 0);
             }
         }
-
+        
         @keyframes rotate {
             0% {
                 transform: rotate(0deg);
             }
-
             100% {
                 transform: rotate(360deg);
             }
         }
-
+        
         @keyframes wave {
             0% {
                 background-position: 0% 50%;
             }
-
             50% {
                 background-position: 100% 50%;
             }
-
             100% {
                 background-position: 0% 50%;
             }
         }
-
+        
         .animate-float {
             animation: float 4s ease-in-out infinite;
         }
-
+        
         .animate-fade-in {
             animation: fadeIn 0.8s ease-out forwards;
         }
-
+        
         .animate-slide-left {
             animation: slideInLeft 0.8s ease-out forwards;
         }
-
+        
         .animate-slide-right {
             animation: slideInRight 0.8s ease-out forwards;
         }
-
+        
         .animate-pulse {
             animation: pulse 3s ease-in-out infinite;
         }
-
+        
         .animate-rotate {
             animation: rotate 15s linear infinite;
         }
-
+        
         .animate-wave-bg {
             background: linear-gradient(270deg, #e6f7ff, #c2e9ff, #99daff);
             background-size: 600% 600%;
             animation: wave 8s ease infinite;
         }
-
+        
         .animate-delay-100 {
             animation-delay: 100ms;
         }
-
+        
         .animate-delay-200 {
             animation-delay: 200ms;
         }
-
+        
         .animate-delay-300 {
             animation-delay: 300ms;
         }
-
+        
         .animate-delay-400 {
             animation-delay: 400ms;
         }
-
+        
         .animate-delay-500 {
             animation-delay: 500ms;
         }
-
+        
         .animate-on-scroll {
             opacity: 0;
             transform: translateY(20px);
             transition: opacity 0.8s ease, transform 0.8s ease;
         }
-
+        
         .animate-on-scroll.active {
             opacity: 1;
             transform: translateY(0);
         }
-
+        
         .menu-slide {
             max-height: 0;
             overflow: hidden;
             transition: max-height 0.5s ease-out;
         }
-
+        
         .menu-slide.active {
             max-height: 300px;
         }
-
-        .stagger-children>* {
+        
+        .stagger-children > * {
             opacity: 0;
             transform: translateY(20px);
             transition: opacity 0.5s ease, transform 0.5s ease;
         }
-
-        .stagger-children.active>* {
+        
+        .stagger-children.active > * {
             opacity: 1;
             transform: translateY(0);
         }
-
-        .stagger-delay-1 {
-            transition-delay: 0.1s;
-        }
-
-        .stagger-delay-2 {
-            transition-delay: 0.2s;
-        }
-
-        .stagger-delay-3 {
-            transition-delay: 0.3s;
-        }
-
-        .stagger-delay-4 {
-            transition-delay: 0.4s;
-        }
-
-        .stagger-delay-5 {
-            transition-delay: 0.5s;
-        }
-
+        
+        .stagger-delay-1 { transition-delay: 0.1s; }
+        .stagger-delay-2 { transition-delay: 0.2s; }
+        .stagger-delay-3 { transition-delay: 0.3s; }
+        .stagger-delay-4 { transition-delay: 0.4s; }
+        .stagger-delay-5 { transition-delay: 0.5s; }
+        
         .product-card:hover .product-cta {
             transform: translateY(0);
             opacity: 1;
         }
-
+        
         .product-cta {
             transform: translateY(20px);
             opacity: 0;
             transition: transform 0.4s ease, opacity 0.4s ease;
         }
-
+        
         .counter {
             transition: transform 0.3s ease;
         }
-
+        
         .counter:hover {
             transform: scale(1.1);
         }
     </style>
 </head>
-
 <body class="text-tech-black overflow-x-hidden">
     <!-- Navigation -->
     <nav class="bg-gray-500 shadow-md sticky top-0 z-50">
@@ -315,9 +284,7 @@
             <div class="flex justify-between h-16">
                 <div class="flex items-center">
                     <div class="flex-shrink-0 flex items-center">
-                        <div
-                            class="bg-glow-blue w-10 h-10 rounded-lg flex items-center justify-center text-white font-bold text-xl animate-pulse">
-                            G<span class="text-black">Z</span></div>
+                        <div class="bg-glow-blue w-10 h-10 rounded-lg flex items-center justify-center text-white font-bold text-xl animate-pulse">G<span class="text-black">Z</span></div>
                         <span class="ml-3 text-xl font-bold">Gen Z <span class="text-glow-blue">Tech</span></span>
                     </div>
                     <div class="hidden md:ml-10 md:flex md:space-x-8">
@@ -336,29 +303,23 @@
                         </button>
                     </div>
                     <div class="md:hidden flex items-center ml-4">
-                        <button id="mobile-menu-button"
-                            class="text-blue-500 hover:text-gray-700 transition-transform hover:scale-110">
+                        <button id="mobile-menu-button" class="text-blue-500 hover:text-gray-700 transition-transform hover:scale-110">
                             <i class="fas fa-bars text-xl"></i>
                         </button>
                     </div>
                 </div>
             </div>
         </div>
-
+        
         <!-- Mobile menu -->
         <div id="mobile-menu" class="menu-slide md:hidden">
             <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
                 <a href="#" class="block px-3 py-2 rounded-md text-base font-medium text-glow-blue">Home</a>
-                <a href="#products"
-                    class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50">Products</a>
-                <a href="#services"
-                    class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50">Services</a>
-                <a href="#blog"
-                    class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50">Blog</a>
-                <a href="#about"
-                    class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50">About</a>
-                <a href="#contact"
-                    class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50">Contact</a>
+                <a href="#products" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50">Products</a>
+                <a href="#services" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50">Services</a>
+                <a href="#blog" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50">Blog</a>
+                <a href="#about" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50">About</a>
+                <a href="#contact" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50">Contact</a>
             </div>
         </div>
     </nav>
@@ -372,16 +333,13 @@
                         Bringing to your <span class="text-glow-blue">comfort zone</span>, quality that costs less
                     </h1>
                     <p class="mt-4 text-gray-600 text-lg">
-                        Discover premium tech accessories at unbeatable prices. Smartwatches, headphones, chargers and
-                        more - all designed with Gen Z in mind.
+                        Discover premium tech accessories at unbeatable prices. Smartwatches, headphones, chargers and more - all designed with Gen Z in mind.
                     </p>
                     <div class="mt-8 flex flex-wrap gap-4">
-                        <a href="#products"
-                            class="inline-block bg-glow-blue text-white px-6 py-3 rounded-lg font-medium hover:bg-blue-500 transition shadow-lg glow animate-pulse">
+                        <a href="#products" class="inline-block bg-glow-blue text-white px-6 py-3 rounded-lg font-medium hover:bg-blue-500 transition shadow-lg glow animate-pulse">
                             Shop Now
                         </a>
-                        <a href="#services"
-                            class="inline-block bg-white text-glow-blue px-6 py-3 rounded-lg font-medium border border-glow-blue hover:bg-glow-blue-light transition hover:shadow-lg">
+                        <a href="#services" class="inline-block bg-white text-glow-blue px-6 py-3 rounded-lg font-medium border border-glow-blue hover:bg-glow-blue-light transition hover:shadow-lg">
                             Explore Services
                         </a>
                     </div>
@@ -402,30 +360,20 @@
                 </div>
                 <div class="md:w-1/2 flex justify-center">
                     <div class="relative">
-                        <div
-                            class="absolute -top-8 -left-8 w-64 h-64 bg-glow-blue-light rounded-full z-0 animate-float">
-                        </div>
+                        <div class="absolute -top-8 -left-8 w-64 h-64 bg-glow-blue-light rounded-full z-0 animate-float"></div>
                         <div class="relative z-10">
                             <div class="grid grid-cols-2 gap-4">
-                                <div
-                                    class="bg-white p-4 rounded-xl shadow-lg transform rotate-3 transition-transform duration-500 hover:rotate-0">
-                                    <img src="https://images.unsplash.com/photo-1546868871-7041f2a55e12?auto=format&fit=crop&w=400&q=80"
-                                        alt="Smartwatch" class="w-full h-40 object-contain product-img">
+                                <div class="bg-white p-4 rounded-xl shadow-lg transform rotate-3 transition-transform duration-500 hover:rotate-0">
+                                    <img src="https://images.unsplash.com/photo-1546868871-7041f2a55e12?auto=format&fit=crop&w=400&q=80" alt="Smartwatch" class="w-full h-40 object-contain product-img">
                                 </div>
-                                <div
-                                    class="bg-white p-4 rounded-xl shadow-lg transform -rotate-3 mt-8 transition-transform duration-500 hover:rotate-0">
-                                    <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=400&q=80"
-                                        alt="Headphones" class="w-full h-40 object-contain product-img">
+                                <div class="bg-white p-4 rounded-xl shadow-lg transform -rotate-3 mt-8 transition-transform duration-500 hover:rotate-0">
+                                    <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=400&q=80" alt="Headphones" class="w-full h-40 object-contain product-img">
                                 </div>
-                                <div
-                                    class="bg-white p-4 rounded-xl shadow-lg transform rotate-6 transition-transform duration-500 hover:rotate-0">
-                                    <img src="Apple-AirPods-Pro-2nd-generation.jpg" alt="Earpods"
-                                        class="w-full h-40 object-contain product-img">
+                                <div class="bg-white p-4 rounded-xl shadow-lg transform rotate-6 transition-transform duration-500 hover:rotate-0">
+                                    <img src="Apple-AirPods-Pro-2nd-generation.jpg" alt="Earpods" class="w-full h-40 object-contain product-img">
                                 </div>
-                                <div
-                                    class="bg-white p-4 rounded-xl shadow-lg transform -rotate-6 mt-8 transition-transform duration-500 hover:rotate-0">
-                                    <img src="Apple-14-Pro-Max-20W-USB-C-Power-Adapter-With-USB-C-To-Lightning-Cable-CN-Version-by-otc.lk-in-srilanka-scaled.jpg"
-                                        alt="Charger" class="w-full h-40 object-contain product-img">
+                                <div class="bg-white p-4 rounded-xl shadow-lg transform -rotate-6 mt-8 transition-transform duration-500 hover:rotate-0">
+                                    <img src="Apple-14-Pro-Max-20W-USB-C-Power-Adapter-With-USB-C-To-Lightning-Cable-CN-Version-by-otc.lk-in-srilanka-scaled.jpg" alt="Charger" class="w-full h-40 object-contain product-img">
                                 </div>
                             </div>
                         </div>
@@ -442,52 +390,47 @@
                 <h2 class="text-3xl font-bold">Our Product Categories</h2>
                 <p class="mt-2 text-gray-600">Find the perfect tech accessories for your lifestyle</p>
             </div>
-
+            
             <div class="mt-10 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 stagger-children">
                 <!-- Category 1 -->
                 <div class="bg-white rounded-xl shadow-md p-6 text-center card-hover stagger-delay-1">
-                    <div
-                        class="w-16 h-16 bg-glow-blue-light rounded-full flex items-center justify-center mx-auto animate-rotate">
+                    <div class="w-16 h-16 bg-glow-blue-light rounded-full flex items-center justify-center mx-auto animate-rotate">
                         <i class="fas fa-usb text-glow-blue text-2xl"></i>
                     </div>
                     <h3 class="mt-4 font-medium">Pendrives</h3>
                     <p class="mt-2 text-sm text-gray-500">High-speed storage solutions</p>
                 </div>
-
+                
                 <!-- Category 2 -->
                 <div class="bg-white rounded-xl shadow-md p-6 text-center card-hover stagger-delay-2">
-                    <div
-                        class="w-16 h-16 bg-glow-blue-light rounded-full flex items-center justify-center mx-auto animate-rotate">
+                    <div class="w-16 h-16 bg-glow-blue-light rounded-full flex items-center justify-center mx-auto animate-rotate">
                         <i class="fas fa-headphones text-glow-blue text-2xl"></i>
                     </div>
                     <h3 class="mt-4 font-medium">Headphones</h3>
                     <p class="mt-2 text-sm text-gray-500">Immersive audio experience</p>
                 </div>
-
+                
                 <!-- Category 3 -->
                 <div class="bg-white rounded-xl shadow-md p-6 text-center card-hover stagger-delay-3">
-                    <div
-                        class="w-16 h-16 bg-glow-blue-light rounded-full flex items-center justify-center mx-auto animate-rotate">
+                    <div class="w-16 h-16 bg-glow-blue-light rounded-full flex items-center justify-center mx-auto animate-rotate">
                         <i class="fas fa-clock text-glow-blue text-2xl"></i>
                     </div>
                     <h3 class="mt-4 font-medium">Smartwatches</h3>
                     <p class="mt-2 text-sm text-gray-500">Stay connected in style</p>
                 </div>
-
+                
                 <!-- Category 4 -->
                 <div class="bg-white rounded-xl shadow-md p-6 text-center card-hover stagger-delay-4">
-                    <div
-                        class="w-16 h-16 bg-glow-blue-light rounded-full flex items-center justify-center mx-auto animate-rotate">
+                    <div class="w-16 h-16 bg-glow-blue-light rounded-full flex items-center justify-center mx-auto animate-rotate">
                         <i class="fas fa-earbuds text-glow-blue text-2xl"></i>
                     </div>
                     <h3 class="mt-4 font-medium">Earpods</h3>
                     <p class="mt-2 text-sm text-gray-500">True wireless freedom</p>
                 </div>
-
+                
                 <!-- Category 5 -->
                 <div class="bg-white rounded-xl shadow-md p-6 text-center card-hover stagger-delay-5">
-                    <div
-                        class="w-16 h-16 bg-glow-blue-light rounded-full flex items-center justify-center mx-auto animate-rotate">
+                    <div class="w-16 h-16 bg-glow-blue-light rounded-full flex items-center justify-center mx-auto animate-rotate">
                         <i class="fas fa-bolt text-glow-blue text-2xl"></i>
                     </div>
                     <h3 class="mt-4 font-medium">Chargers</h3>
@@ -506,21 +449,17 @@
                     <p class="mt-2 text-gray-600">Top picks from our collection</p>
                 </div>
                 <div class="flex space-x-4">
-                    <button
-                        class="px-4 py-2 border border-gray-300 rounded-lg hover:bg-gray-100 transition-all hover:shadow-md">All</button>
-                    <button
-                        class="px-4 py-2 border border-gray-300 rounded-lg hover:bg-gray-100 transition-all hover:shadow-md">New</button>
-                    <button
-                        class="px-4 py-2 border border-gray-300 rounded-lg hover:bg-gray-100 transition-all hover:shadow-md">Popular</button>
+                    <button class="px-4 py-2 border border-gray-300 rounded-lg hover:bg-gray-100 transition-all hover:shadow-md">All</button>
+                    <button class="px-4 py-2 border border-gray-300 rounded-lg hover:bg-gray-100 transition-all hover:shadow-md">New</button>
+                    <button class="px-4 py-2 border border-gray-300 rounded-lg hover:bg-gray-100 transition-all hover:shadow-md">Popular</button>
                 </div>
             </div>
-
+            
             <div class="mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 stagger-children">
                 <!-- Product 1 -->
                 <div class="bg-white rounded-xl shadow-md overflow-hidden card-hover stagger-delay-1">
                     <div class="relative">
-                        <img src="bbef6da0-3e22-4c59-9b15-f754db82696f-Photoroom-e1740501474944.jpg"
-                            alt="Ultra Pro Series 10" class="w-full h-56 object-cover product-img">
+                        <img src="bbef6da0-3e22-4c59-9b15-f754db82696f-Photoroom-e1740501474944.jpg" alt="Ultra Pro Series 10" class="w-full h-56 object-cover product-img">
                         <!--<div class="absolute top-3 right-3">
                             <button class="w-10 h-10 rounded-full bg-white shadow-md flex items-center justify-center hover:text-accent transition-transform hover:scale-110">
                                 <i class="far fa-heart"></i>
@@ -550,7 +489,7 @@
                         </button>-->
                     </div>
                 </div>
-
+                
                 <!-- Product 2 -->
                 <div class="bg-white rounded-xl shadow-md overflow-hidden card-hover stagger-delay-2">
                     <div class="relative">
@@ -579,21 +518,18 @@
                             </div>
                             <span class="ml-2 text-gray-500 text-sm">(89)</span>
                         </div>
-                        <button
-                            class="mt-4 w-full bg-glow-blue-light text-glow-blue py-2 rounded-lg font-medium hover:bg-glow-blue hover:text-white transition product-cta">
+                        <button class="mt-4 w-full bg-glow-blue-light text-glow-blue py-2 rounded-lg font-medium hover:bg-glow-blue hover:text-white transition product-cta">
                             Add to Cart
                         </button>
                     </div>
                 </div>
-
+                
                 <!-- Product 3 -->
                 <div class="bg-white rounded-xl shadow-md overflow-hidden card-hover stagger-delay-3">
                     <div class="relative">
-                        <img src="https://images.unsplash.com/photo-1595941069915-4ebc5197c14a?auto=format&fit=crop&w=400&q=80"
-                            alt="True Wireless Earbuds" class="w-full h-56 object-cover product-img">
+                        <img src="https://images.unsplash.com/photo-1595941069915-4ebc5197c14a?auto=format&fit=crop&w=400&q=80" alt="True Wireless Earbuds" class="w-full h-56 object-cover product-img">
                         <div class="absolute top-3 right-3">
-                            <button
-                                class="w-10 h-10 rounded-full bg-white shadow-md flex items-center justify-center hover:text-accent transition-transform hover:scale-110">
+                            <button class="w-10 h-10 rounded-full bg-white shadow-md flex items-center justify-center hover:text-accent transition-transform hover:scale-110">
                                 <i class="far fa-heart"></i>
                             </button>
                         </div>
@@ -616,21 +552,18 @@
                             </div>
                             <span class="ml-2 text-gray-500 text-sm">(56)</span>
                         </div>
-                        <button
-                            class="mt-4 w-full bg-glow-blue-light text-glow-blue py-2 rounded-lg font-medium hover:bg-glow-blue hover:text-white transition product-cta">
+                        <button class="mt-4 w-full bg-glow-blue-light text-glow-blue py-2 rounded-lg font-medium hover:bg-glow-blue hover:text-white transition product-cta">
                             Add to Cart
                         </button>
                     </div>
                 </div>
-
+                
                 <!-- Product 4 -->
                 <div class="bg-white rounded-xl shadow-md overflow-hidden card-hover stagger-delay-4">
                     <div class="relative">
-                        <img src="https://images.unsplash.com/photo-1606220588911-4561a91e2b3d?auto=format&fit=crop&w=400&q=80"
-                            alt="Fast Charger" class="w-full h-56 object-cover product-img">
+                        <img src="https://images.unsplash.com/photo-1606220588911-4561a91e2b3d?auto=format&fit=crop&w=400&q=80" alt="Fast Charger" class="w-full h-56 object-cover product-img">
                         <div class="absolute top-3 right-3">
-                            <button
-                                class="w-10 h-10 rounded-full bg-white shadow-md flex items-center justify-center hover:text-accent transition-transform hover:scale-110">
+                            <button class="w-10 h-10 rounded-full bg-white shadow-md flex items-center justify-center hover:text-accent transition-transform hover:scale-110">
                                 <i class="far fa-heart"></i>
                             </button>
                         </div>
@@ -653,8 +586,7 @@
                             </div>
                             <span class="ml-2 text-gray-500 text-sm">(203)</span>
                         </div>
-                        <button
-                            class="mt-4 w-full bg-glow-blue-light text-glow-blue py-2 rounded-lg font-medium hover:bg-glow-blue hover:text-white transition product-cta">
+                        <button class="mt-4 w-full bg-glow-blue-light text-glow-blue py-2 rounded-lg font-medium hover:bg-glow-blue hover:text-white transition product-cta">
                             Add to Cart
                         </button>
                     </div>
@@ -670,7 +602,7 @@
                 <h2 class="text-3xl font-bold">Our Premium Services</h2>
                 <p class="mt-2 text-gray-600">More than just products - we offer complete tech solutions</p>
             </div>
-
+            
             <div class="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <!-- Service 1 -->
                 <div class="bg-white p-8 rounded-xl shadow-lg card-hover animate-on-scroll">
@@ -678,36 +610,33 @@
                         <i class="fas fa-tools text-glow-blue text-2xl"></i>
                     </div>
                     <h3 class="text-xl font-bold">Device Repair</h3>
-                    <p class="mt-4 text-gray-600">Fast and reliable repair services for all your tech devices. Our
-                        expert technicians will have your device working like new.</p>
+                    <p class="mt-4 text-gray-600">Fast and reliable repair services for all your tech devices. Our expert technicians will have your device working like new.</p>
                     <button class="mt-6 text-glow-blue font-medium flex items-center group">
                         Learn More
                         <i class="fas fa-arrow-right ml-2 transition-transform group-hover:translate-x-1"></i>
                     </button>
                 </div>
-
+                
                 <!-- Service 2 -->
                 <div class="bg-white p-8 rounded-xl shadow-lg card-hover animate-on-scroll">
                     <div class="w-16 h-16 rounded-full bg-glow-blue-light flex items-center justify-center mb-6">
                         <i class="fas fa-headset text-glow-blue text-2xl"></i>
                     </div>
                     <h3 class="text-xl font-bold">24/7 Support</h3>
-                    <p class="mt-4 text-gray-600">Our dedicated support team is always ready to help you with any tech
-                        issues or questions you might have.</p>
+                    <p class="mt-4 text-gray-600">Our dedicated support team is always ready to help you with any tech issues or questions you might have.</p>
                     <button class="mt-6 text-glow-blue font-medium flex items-center group">
                         Learn More
                         <i class="fas fa-arrow-right ml-2 transition-transform group-hover:translate-x-1"></i>
                     </button>
                 </div>
-
+                
                 <!-- Service 3 -->
                 <div class="bg-white p-8 rounded-xl shadow-lg card-hover animate-on-scroll">
                     <div class="w-16 h-16 rounded-full bg-glow-blue-light flex items-center justify-center mb-6">
                         <i class="fas fa-shipping-fast text-glow-blue text-2xl"></i>
                     </div>
                     <h3 class="text-xl font-bold">Express Delivery</h3>
-                    <p class="mt-4 text-gray-600">Get your products delivered lightning fast. We offer same-day delivery
-                        in select areas and next-day nationwide.</p>
+                    <p class="mt-4 text-gray-600">Get your products delivered lightning fast. We offer same-day delivery in select areas and next-day nationwide.</p>
                     <button class="mt-6 text-glow-blue font-medium flex items-center group">
                         Learn More
                         <i class="fas fa-arrow-right ml-2 transition-transform group-hover:translate-x-1"></i>
@@ -724,7 +653,7 @@
                 <h2 class="text-3xl font-bold">What Our Customers Say</h2>
                 <p class="mt-2 text-gray-600">Real experiences from our tech community</p>
             </div>
-
+            
             <div class="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8">
                 <!-- Testimonial 1 -->
                 <div class="bg-white p-6 rounded-xl shadow-md animate-on-scroll">
@@ -743,11 +672,9 @@
                             </div>
                         </div>
                     </div>
-                    <p class="mt-4 text-gray-600 italic">"The smart watch is great! Didn't think I could trust something
-                        that affordable especially as it came with the earpods too. Best purchase I've made this year."
-                    </p>
+                    <p class="mt-4 text-gray-600 italic">"The smart watch is great! Didn't think I could trust something that affordable especially as it came with the earpods too. Best purchase I've made this year."</p>
                 </div>
-
+                
                 <!-- Testimonial 2 -->
                 <div class="bg-white p-6 rounded-xl shadow-md animate-on-scroll">
                     <div class="flex items-center">
@@ -765,10 +692,9 @@
                             </div>
                         </div>
                     </div>
-                    <p class="mt-4 text-gray-600 italic">"Fast charger works like a charm. Charges my phone from 0 to
-                        80% in just 30 minutes. The build quality is excellent too!"</p>
+                    <p class="mt-4 text-gray-600 italic">"Fast charger works like a charm. Charges my phone from 0 to 80% in just 30 minutes. The build quality is excellent too!"</p>
                 </div>
-
+                
                 <!-- Testimonial 3 -->
                 <div class="bg-white p-6 rounded-xl shadow-md animate-on-scroll">
                     <div class="flex items-center">
@@ -786,9 +712,7 @@
                             </div>
                         </div>
                     </div>
-                    <p class="mt-4 text-gray-600 italic">"I my got storage devices without any hassle. It was delivered
-                        super fast, right to campus, with zero delivery charges. The whole process was smooth,
-                        affordable, and way quicker than I expected."</p>
+                    <p class="mt-4 text-gray-600 italic">"I my got storage devices without any hassle. It was delivered super fast, right to campus, with zero delivery charges. The whole process was smooth, affordable, and way quicker than I expected."</p>
                 </div>
             </div>
         </div>
@@ -796,124 +720,103 @@
 
     <!-- Newsletter -->
     <section class="py-16 bg-glow-blue text-white">
-        <form action="https://api.web3forms.com/submit" method="POST">
-
-            <!-- Replace with your Access Key -->
-            <input type="hidden" name="access_key" value="c4b2b5a-c14e-4f25-afe4-5f664196">
-            <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center animate-on-scroll">
-                <h2 class="text-3xl font-bold">Join Our Tech Community</h2>
-                <p class="mt-4 opacity-90">Subscribe to get exclusive deals, tech tips, and early access to new products
-                </p>
-
-                <div class="mt-8 max-w-md mx-auto flex">
-                    <input type="email" placeholder="Your email address"
-                        class="flex-grow px-4 py-3 rounded-l-lg text-tech-black focus:outline-none">
-                    <button
-                        class="bg-tech-black px-6 py-3 rounded-r-lg font-medium hover:bg-gray-800 transition">Subscribe</button>
-                </div>
-
-                <p class="mt-4 text-sm opacity-80">We respect your privacy. Unsubscribe at any time.</p>
+        <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center animate-on-scroll">
+            <h2 class="text-3xl font-bold">Join Our Tech Community</h2>
+            <p class="mt-4 opacity-90">Subscribe to get exclusive deals, tech tips, and early access to new products</p>
+            
+            <div class="mt-8 max-w-md mx-auto flex">
+                <input type="email" placeholder="Your email address" class="flex-grow px-4 py-3 rounded-l-lg text-tech-black focus:outline-none">
+                <button class="bg-tech-black px-6 py-3 rounded-r-lg font-medium hover:bg-gray-800 transition">Subscribe</button>
             </div>
-        </form>
+            
+            <p class="mt-4 text-sm opacity-80">We respect your privacy. Unsubscribe at any time.</p>
+        </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-tech-black text-white py-12">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
-                <div>
-                    <div class="flex items-center">
-                        <div
-                            class="bg-glow-blue w-10 h-10 rounded-lg flex items-center justify-center text-white font-bold text-xl">
-                            G<span class="text-black">Z</span></div>
-                        <span class="ml-3 text-xl font-bold">Gen Z <span class="text-glow-blue">Tech</span></span>
-                    </div>
-                    <p class="mt-4 text-gray-400">Bringing premium tech to your comfort zone at prices that make sense.
-                    </p>
-                    <div class="mt-6 flex space-x-4">
-                        <a href="#" class="text-gray-400 hover:text-blue-400 transition"><i
-                                class="fab fa-facebook-f"></i></a>
-                        <a href="#" class="text-gray-400 hover:text-blue-400 transition"><i
-                                class="fab fa-twitter"></i></a>
-                        <a href="#" class="text-gray-400 hover:text-blue-400 transition"><i
-                                class="fab fa-instagram"></i></a>
-                        <a href="#" class="text-gray-400 hover:text-blue-400 transition"><i
-                                class="fab fa-tiktok"></i></a>
-                    </div>
+ <footer class="bg-tech-black text-white py-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+            <div>
+                <div class="flex items-center">
+                    <div class="bg-glow-blue w-10 h-10 rounded-lg flex items-center justify-center text-white font-bold text-xl">G<span class="text-black">Z</span></div>
+                    <span class="ml-3 text-xl font-bold">Gen Z <span class="text-glow-blue">Tech</span></span>
                 </div>
-
-                <div>
-                    <h3 class="text-lg font-bold">Quick Links</h3>
-                    <ul class="mt-4 space-y-2">
-                        <li><a href="#" class="text-gray-400 hover:text-white transition">Home</a></li>
-                        <li><a href="#products" class="text-gray-400 hover:text-white transition">Products</a></li>
-                        <li><a href="#services" class="text-gray-400 hover:text-white transition">Services</a></li>
-                        <li><a href="#blog" class="text-gray-400 hover:text-white transition">Blog</a></li>
-                        <li><a href="#about" class="text-gray-400 hover:text-white transition">About Us</a></li>
-                    </ul>
+                <p class="mt-4 text-gray-400">Bringing premium tech to your comfort zone at prices that make sense.</p>
+                <div class="mt-6 flex space-x-4">
+                    <a href="#" class="text-gray-400 hover:text-blue-400 transition"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="text-gray-400 hover:text-blue-400 transition"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="text-gray-400 hover:text-blue-400 transition"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="text-gray-400 hover:text-blue-400 transition"><i class="fab fa-tiktok"></i></a>
                 </div>
-
-                <div>
-                    <h3 class="text-lg font-bold">Customer Care</h3>
-                    <ul class="mt-4 space-y-2">
-                        <li><a href="#" class="text-gray-400 hover:text-white transition">Contact Us</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-white transition">FAQs</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-white transition">Shipping Policy</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-white transition">Returns & Refunds</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-white transition">Privacy Policy</a></li>
-                    </ul>
-                </div>
-
-                <div id="contact">
-                    <h3 class="text-md font-semibold">Contact Us</h3>
-                    <form class="mt-2 space-y-3" action="https://api.web3forms.com/submit" method="POST">
-                        <input type="hidden" name="access_key" value="7c4b2b5a-c14e-4f25-afe4-5f6641964f5b">
-                        <div>
-                            <label for="name" class="block text-xs text-gray-400 mb-1">Name</label>
-                            <input type="text" id="name"
-                                class="w-full px-2 py-1 text-sm bg-gray-800 border border-gray-700 rounded-md text-white focus:outline-none focus:ring-1 focus:ring-glow-blue transition">
-                        </div>
-                        <div>
-                            <label for="email" class="block text-xs text-gray-400 mb-1">Email</label>
-                            <input type="email" id="email"
-                                class="w-full px-2 py-1 text-sm bg-gray-800 border border-gray-700 rounded-md text-white focus:outline-none focus:ring-1 focus:ring-glow-blue transition">
-                        </div>
-                        <div>
-                            <label for="message" class="block text-xs text-gray-400 mb-1">Message</label>
-                            <textarea id="message" rows="2"
-                                class="w-full px-2 py-1 text-sm bg-gray-800 border border-gray-700 rounded-md text-white focus:outline-none focus:ring-1 focus:ring-glow-blue transition"></textarea>
-                        </div>
-                        <button type="submit"
-                            class="w-full bg-glow-blue text-white text-sm px-3 py-2 rounded-md font-medium hover:bg-blue-500 transition transform hover:scale-105">
-                            Send Message
-                        </button>
-                    </form>
-                </div>
+            </div>
+            
+            <div>
+                <h3 class="text-lg font-bold">Quick Links</h3>
+                <ul class="mt-4 space-y-2">
+                    <li><a href="#" class="text-gray-400 hover:text-white transition">Home</a></li>
+                    <li><a href="#products" class="text-gray-400 hover:text-white transition">Products</a></li>
+                    <li><a href="#services" class="text-gray-400 hover:text-white transition">Services</a></li>
+                    <li><a href="#blog" class="text-gray-400 hover:text-white transition">Blog</a></li>
+                    <li><a href="#about" class="text-gray-400 hover:text-white transition">About Us</a></li>
+                </ul>
+            </div>
+            
+            <div>
+                <h3 class="text-lg font-bold">Customer Care</h3>
+                <ul class="mt-4 space-y-2">
+                    <li><a href="#" class="text-gray-400 hover:text-white transition">Contact Us</a></li>
+                    <li><a href="#" class="text-gray-400 hover:text-white transition">FAQs</a></li>
+                    <li><a href="#" class="text-gray-400 hover:text-white transition">Shipping Policy</a></li>
+                    <li><a href="#" class="text-gray-400 hover:text-white transition">Returns & Refunds</a></li>
+                    <li><a href="#" class="text-gray-400 hover:text-white transition">Privacy Policy</a></li>
+                </ul>
+            </div>
+            
+           <div id="contact">
+    <h3 class="text-md font-semibold">Contact Us</h3>
+    <form class="mt-2 space-y-3">
+        
+        <div>
+            <label for="name" class="block text-xs text-gray-400 mb-1">Name</label>
+            <input type="text" id="name" class="w-full px-2 py-1 text-sm bg-gray-800 border border-gray-700 rounded-md text-white focus:outline-none focus:ring-1 focus:ring-glow-blue transition">
+        </div>
+        <div>
+            <label for="email" class="block text-xs text-gray-400 mb-1">Email</label>
+            <input type="email" id="email" class="w-full px-2 py-1 text-sm bg-gray-800 border border-gray-700 rounded-md text-white focus:outline-none focus:ring-1 focus:ring-glow-blue transition">
+        </div>
+        <div>
+            <label for="message" class="block text-xs text-gray-400 mb-1">Message</label>
+            <textarea id="message" rows="2" class="w-full px-2 py-1 text-sm bg-gray-800 border border-gray-700 rounded-md text-white focus:outline-none focus:ring-1 focus:ring-glow-blue transition"></textarea>
+        </div>
+        <button type="submit" class="w-full bg-glow-blue text-white text-sm px-3 py-2 rounded-md font-medium hover:bg-blue-500 transition transform hover:scale-105">
+            Send Message
+        </button>
+    </form>
+</div>
 
             </div>
         </div>
-
+        
         <div class="mt-12 pt-8 border-t border-gray-800 text-center text-gray-500 text-sm">
-            <p>&copy; 2023 Gen Z Tech. All rights reserved. Designed with <i class="fas fa-heart text-accent"></i> by <a
-                    class="text-white italic" href="https://jurist-jenkins.vercel.app/" target="_blank">Jurist
-                    Jenkins</a> for the next generation.</p>
+            <p>&copy; 2023 Gen Z Tech. All rights reserved. Designed with <i class="fas fa-heart text-accent"></i> by <a class="text-white italic" href="https://jurist-jenkins.vercel.app/" target="_blank">Jurist Jenkins</a> for the next generation.</p>
         </div>
-        </div>
-    </footer>
+    </div>
+</footer>
 
     <script>
         // Mobile menu toggle
         const mobileMenuButton = document.getElementById('mobile-menu-button');
         const mobileMenu = document.getElementById('mobile-menu');
-
+        
         mobileMenuButton.addEventListener('click', () => {
             mobileMenu.classList.toggle('active');
         });
-
+        
         // Animation on scroll
         const animateOnScrollElements = document.querySelectorAll('.animate-on-scroll');
         const staggerChildrenElements = document.querySelectorAll('.stagger-children');
-
+        
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
@@ -925,21 +828,21 @@
             threshold: 0.1,
             rootMargin: '0px 0px -50px 0px'
         });
-
+        
         animateOnScrollElements.forEach(el => {
             observer.observe(el);
         });
-
+        
         staggerChildrenElements.forEach(el => {
             observer.observe(el);
         });
-
+        
         // Floating cart badge animation
         const cartBadge = document.querySelector('.cart-badge');
         setInterval(() => {
             cartBadge.classList.toggle('animate-bounce-slow');
         }, 3000);
-
+        
         // Rotating icons in categories
         const categoryIcons = document.querySelectorAll('.card-hover .fa');
         categoryIcons.forEach(icon => {
@@ -947,24 +850,24 @@
                 icon.style.transform = 'rotate(360deg)';
                 icon.style.transition = 'transform 0.6s ease';
             });
-
+            
             icon.addEventListener('mouseleave', () => {
                 icon.style.transform = 'rotate(0deg)';
             });
         });
-
+        
         // Counter hover effect
         const counters = document.querySelectorAll('.counter');
         counters.forEach(counter => {
             counter.addEventListener('mouseenter', () => {
                 counter.style.transform = 'scale(1.1)';
             });
-
+            
             counter.addEventListener('mouseleave', () => {
                 counter.style.transform = 'scale(1)';
             });
         });
-
+        
         // Hero image animation on load
         document.addEventListener('DOMContentLoaded', () => {
             const heroImages = document.querySelectorAll('.product-img');
@@ -977,7 +880,7 @@
                 }, index * 300);
             });
         });
-
+        
         // Rotating background gradient
         const waveBg = document.querySelector('.animate-wave-bg');
         let rotation = 0;
@@ -988,5 +891,4 @@
         }, 100);
     </script>
 </body>
-
 </html>
