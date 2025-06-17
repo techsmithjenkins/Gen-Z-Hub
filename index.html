@@ -941,21 +941,33 @@
 
 
     <!-- Newsletter -->
-    <section class="py-16 bg-glow-blue text-white">
-        <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center animate-on-scroll">
-            <h2 class="text-3xl font-bold">Join Our Tech Community</h2>
-            <p class="mt-4 opacity-90">Subscribe to get exclusive deals, tech tips, and early access to new products</p>
+<section class="py-16 bg-glow-blue text-white">
+  <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center animate-on-scroll">
+    <h2 class="text-3xl font-bold">Join Our Tech Community</h2>
+    <p class="mt-4 opacity-90 text-sm sm:text-base">
+      Subscribe to get exclusive deals, tech tips, and early access to new products
+    </p>
 
-            <div class="mt-8 max-w-md mx-auto flex">
-                <input type="email" placeholder="Your email address"
-                    class="flex-grow px-4 py-3 rounded-l-lg text-tech-black focus:outline-none">
-                <button
-                    class="bg-tech-black px-6 py-3 rounded-r-lg font-medium hover:bg-gray-800 transition">Subscribe</button>
-            </div>
+    <form class="mt-8 max-w-md mx-auto flex flex-col sm:flex-row gap-3 sm:gap-0">
+      <input
+        type="email"
+        placeholder="Your email address"
+        class="flex-grow px-4 py-3 rounded-lg sm:rounded-l-lg sm:rounded-r-none text-tech-black focus:outline-none text-sm"
+      />
+      <button
+        type="submit"
+        class="bg-tech-black px-6 py-3 rounded-lg sm:rounded-r-lg sm:rounded-l-none font-medium hover:bg-gray-800 transition text-sm"
+      >
+        Subscribe
+      </button>
+    </form>
 
-            <p class="mt-4 text-sm opacity-80">We respect your privacy. Unsubscribe at any time.</p>
-        </div>
-    </section>
+    <p class="mt-4 text-xs sm:text-sm opacity-80">
+      We respect your privacy. Unsubscribe at any time.
+    </p>
+  </div>
+</section>
+
 
     <!-- Footer -->
     <footer class="bg-tech-black text-white py-12">
