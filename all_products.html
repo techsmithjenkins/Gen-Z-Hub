@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to Gen Z Tech</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        body {
+            overflow-x: hidden;
+            scroll-behavior: smooth;
+        }
+
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 1.5s ease-out, transform 1.5s ease-out;
+        }
+
+        .fade-in.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .infinite-float {
+            animation: float 4s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-15px);
+            }
+
+            100% {
+                transform: translateY(0);
+            }
+        }
+
+        .rotate-infinite {
+            animation: spin 8s linear infinite;
+        }
+
+        @keyframes spin {
+            from {
+                transform: rotate(0deg);
+            }
+
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        .rgb-border-btn {
+            position: relative;
+            z-index: 0;
+            overflow: hidden;
+            border-radius: 9999px;
+        }
+
+        .rgb-border-btn::before {
+            content: "";
+            position: absolute;
+            inset: -2px;
+            background: conic-gradient(red,
+                    orange,
+                    yellow,
+                    lime,
+                    cyan,
+                    blue,
+                    violet,
+                    red);
+            animation: spin 4s linear infinite;
+            z-index: -2;
+            border-radius: inherit;
+        }
+
+        .rgb-border-btn::after {
+            content: "";
+            position: absolute;
+            inset: 2px;
+            background-color: #1e3a8a;
+            /* bg-blue-800 or whatever */
+            z-index: -1;
+            border-radius: inherit;
+        }
+
+        .rgb-border-btn:hover::before {
+            animation-play-state: paused;
+        }
+
+        @keyframes spin {
+            to {
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+</head>
+
+<body class="bg-gray-900 text-white font-sans">
+    <!-- Animated Hero Section -->
+    <section
+        class="relative h-screen flex items-center justify-center bg-gradient-to-br from-blue-900 via-gray-900 to-black">
+        <div class="text-center space-y-6 fade-in">
+            <h1
+                class="text-5xl md:text-7xl font-extrabold bg-gradient-to-r from-blue-400 to-cyan-500 bg-clip-text text-transparent animate-pulse">
+                Welcome to Gen Z Tech
+            </h1>
+            <p class="text-lg md:text-2xl text-gray-300 animate-fadeIn">
+                Bringing to your comfort zone, quality that costs less.
+            </p>
+
+
+            <a href="#products"
+                class="rgb-border-btn inline-block px-8 py-3 text-white font-semibold transition-transform hover:scale-105">
+                Explore Products
+            </a>
+
+
+        </div>
+        <!-- Floating Icons -->
+        <img src="https://static.vecteezy.com/system/resources/thumbnails/021/630/044/small_2x/3d-rendering-white-smart-watch-perspective-view-png.png"
+            class="absolute top-20 left-10 w-36 infinite-float" alt="smartwatch">
+        <img src="soundcore.png" class="absolute bottom-20 right-10 w-32 infinite-float" alt="earpods">
+        <img src="usb.png" class="absolute top-32 right-32 w-24 rotate-infinite" alt="usb">
+    </section>
+
+    <!-- Features Section -->
+    <section id="products" class="py-20 bg-gray-800">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-bold text-center mb-12 fade-in">Explore Our Categories</h2>
+            <div class="grid md:grid-cols-3 gap-10">
+                <div class="bg-gray-700 p-6 rounded-lg shadow-lg fade-in">
+                    <h3 class="text-2xl font-bold mb-2">Smart Watches</h3>
+                    <p>Track your fitness, stay connected, and look good doing it.</p>
+                </div>
+                <div class="bg-gray-700 p-6 rounded-lg shadow-lg fade-in">
+                    <h3 class="text-2xl font-bold mb-2">Phone Accessories</h3>
+                    <p>Chargers, cables, stands, and more — we got all the extras.</p>
+                </div>
+                <div class="bg-gray-700 p-6 rounded-lg shadow-lg fade-in">
+                    <h3 class="text-2xl font-bold mb-2">Storage Devices</h3>
+                    <p>Reliable pendrives and memory cards for your data needs.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Products -->
+    <section class="py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center animate-on-scroll">
+                <div>
+                    <h2 class="text-3xl font-bold">Featured Products</h2>
+                    <p class="mt-2 text-gray-300">Top picks from our collection</p>
+                </div>
+                <div class="flex space-x-4">
+                    <button
+                        class="px-4 py-2 border border-gray-300 rounded-lg hover:bg-gray-100 transition-all hover:shadow-md">All</button>
+                    <button
+                        class="px-4 py-2 border border-gray-300 rounded-lg hover:bg-gray-100 transition-all hover:shadow-md">New</button>
+                    <button
+                        class="px-4 py-2 border border-gray-300 rounded-lg hover:bg-gray-100 transition-all hover:shadow-md">Popular</button>
+                </div>
+            </div>
+
+            <div class="mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 stagger-children">
+                <!-- Product 1 -->
+                <div class="bg-blue-900 rounded-xl shadow-md overflow-hidden card-hover stagger-delay-1">
+                    <div class="relative">
+                        <img src="bbef6da0-3e22-4c59-9b15-f754db82696f-Photoroom-e1740501474944.jpg"
+                            alt="Ultra Pro Series 10" class="w-full h-56 object-cover product-img">
+                        <!--<div class="absolute top-3 right-3">
+                            <button class="w-10 h-10 rounded-full bg-white shadow-md flex items-center justify-center hover:text-accent transition-transform hover:scale-110">
+                                <i class="far fa-heart"></i>
+                            </button>
+                        </div>-->
+                    </div>
+                    <div class="p-4">
+                        <div class="flex justify-between items-start">
+                            <div>
+                                <h3 class="font-bold">Ultra Pro Series 10</h3>
+                                <li class="text-gray-300 text-sm"> Affordable</li>
+                                <li class="text-gray-300 text-sm"> With Earpods</li>
+                                <li class="text-gray-300 text-sm"> Wireless Charging</li>
+                                <li class="text-gray-300 text-sm"> Sensitive Touch Screen</li>
+                                <li class="text-gray-300 text-sm"> Connect to your phone</li>
+                                <li class="text-gray-300 text-sm"> Compatible with both Android and iOS</li>
+                            </div>
+                            <span class="text-glow-blue font-bold">GHc 350</span>
+                        </div>
+                        <div class="mt-4 flex items-center">
+                            <div class="flex text-yellow-400">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                            <span class="ml-2 text-gray-300 text-sm">(142)</span>
+                        </div>
+                        <!--<button class="mt-4 w-full bg-glow-blue-light text-glow-blue py-2 rounded-lg font-medium hover:bg-glow-blue hover:text-white transition product-cta">
+                            Add to Cart
+                        </button>-->
+                    </div>
+                </div>
+
+                <!-- Product 2 -->
+                <div class="bg-blue-900 rounded-xl shadow-md overflow-hidden card-hover stagger-delay-2">
+                    <div class="relative">
+                        <img src="jbl-tune.jpg" alt="Wireless Headphones" class="w-full h-56 object-cover product-img">
+                        <!--<div class="absolute top-3 right-3">
+                            <button class="w-10 h-10 rounded-full bg-white shadow-md flex items-center justify-center text-accent transition-transform hover:scale-110">
+                                <i class="fas fa-heart"></i>
+                            </button>
+                        </div>-->
+                    </div>
+                    <div class="p-4">
+                        <div class="flex justify-between items-start">
+                            <div>
+                                <h3 class="font-bold">Wireless Headphones</h3>
+                                <li class="text-gray-300 text-sm">Noise Cancelling</li>
+                                <li class="text-gray-300 text-sm"> Affordable yet Durable</li>
+                                <li class="text-gray-300 text-sm"> Detachable Audio Cable</li>
+                                <li class="text-gray-300 text-sm"> Lightweight & Foldable Design</li>
+                                <li class="text-gray-300 text-sm"> Compatible with both Android and iOS</li>
+
+                            </div>
+                            <span class="text-glow-blue font-bold">GHc150</span>
+                        </div>
+                        <div class="mt-4 flex items-center">
+                            <div class="flex text-yellow-400">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                            </div>
+                            <span class="ml-2 text-gray-300 text-sm">(89)</span>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Product 3 -->
+                <div class="bg-blue-900 rounded-xl shadow-md overflow-hidden card-hover stagger-delay-3">
+                    <div class="relative">
+                        <img src="HP-Wireless-RGB-Mouse.jpg" alt="Wireless-RGB-Mouse"
+                            class="w-full h-56 object-cover product-img">
+                        <div class="absolute top-3 right-3">
+
+                        </div>
+                    </div>
+                    <div class="p-4">
+                        <div class="flex justify-between items-start">
+                            <div>
+                                <h3 class="font-bold">Rechargeable Wireless Mouse</h3>
+                                <li class="text-gray-300 text-sm"> Affordable</li>
+                                <li class="text-gray-300 text-sm">Dual Mode Connection</li>
+                                <li class="text-gray-300 text-sm">Seamless Bluetooth Mode</li>
+                                <li class="text-gray-300 text-sm">USB Adapter Connection</li>
+                                <li class="text-gray-300 text-sm"> Affordable</li>
+
+                            </div>
+                            <span class="text-glow-blue font-bold">GHc70</span>
+                        </div>
+                        <div class="mt-4 flex items-center">
+                            <div class="flex text-yellow-400">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                                <i class="far fa-star"></i>
+                            </div>
+                            <span class="ml-2 text-gray-300 text-sm">(56)</span>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Product 4 -->
+                <div class="bg-blue-900 rounded-xl shadow-md overflow-hidden card-hover stagger-delay-4">
+                    <div class="relative">
+                        <img src="red mini speaker.jpg" alt="Mini Speaker" class="w-full h-56 object-cover product-img">
+                        <div class="absolute top-3 right-3">
+
+                        </div>
+                    </div>
+                    <div class="p-4">
+                        <div class="flex justify-between items-start">
+                            <div>
+                                <h3 class="font-bold text-blue-500">USB Mini Speaker</h3>
+                                <p class="text-gray-300 text-sm">Multipurpose Charging & Cooling</p>
+                            </div>
+                            <span class="text-glow-blue font-bold">$29.99</span>
+                        </div>
+                        <div class="mt-4 flex items-center">
+                            <div class="flex text-yellow-400">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <span class="ml-2 text-gray-300 text-sm">(203)</span>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Product 5 -->
+                <div class="bg-blue-900 rounded-xl shadow-md overflow-hidden card-hover stagger-delay-4">
+                    <div class="relative">
+                        <img src="blue mini speaker.jpg" alt="mini speaker"
+                            class="w-full h-56 object-cover product-img">
+                        <div class="absolute top-3 right-3">
+
+                        </div>
+                    </div>
+                    <div class="p-4">
+                        <div class="flex justify-between items-start">
+                            <div>
+                                <h3 class="font-bold">USB Mini Speake</h3>
+                                <p class="text-gray-300 text-sm">Multipurpose Charging & Cooling</p>
+                            </div>
+                            <span class="text-glow-blue font-bold">$29.99</span>
+                        </div>
+                        <div class="mt-4 flex items-center">
+                            <div class="flex text-yellow-400">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <span class="ml-2 text-gray-300 text-sm">(203)</span>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Product 6 -->
+                <div class="bg-blue-900 rounded-xl shadow-md overflow-hidden card-hover stagger-delay-4">
+                    <div class="relative">
+                        <img src="green mini speaker.jpg" alt="mini speaker"
+                            class="w-full h-56 object-cover product-img">
+                        <div class="absolute top-3 right-3">
+
+                        </div>
+                    </div>
+                    <div class="p-4">
+                        <div class="flex justify-between items-start">
+                            <div>
+                                <h3 class="font-bold">PS 5 Charging & Cooling Deck</h3>
+                                <p class="text-gray-300 text-sm">Multipurpose Charging & Cooling</p>
+                            </div>
+                            <span class="text-glow-blue font-bold">$29.99</span>
+                        </div>
+                        <div class="mt-4 flex items-center">
+                            <div class="flex text-yellow-400">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <span class="ml-2 text-gray-300 text-sm">(203)</span>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Product 7 -->
+                <div class="bg-blue-900 rounded-xl shadow-md overflow-hidden card-hover stagger-delay-4">
+                    <div class="relative">
+                        <img src="ps5 desck.png" alt="PS 5 Accessory" class="w-full h-56 object-cover product-img">
+                        <div class="absolute top-3 right-3">
+
+                        </div>
+                    </div>
+                    <div class="p-4">
+                        <div class="flex justify-between items-start">
+                            <div>
+                                <h3 class="font-bold">PS 5 Charging & Cooling Deck</h3>
+                                <p class="text-gray-300 text-sm">Multipurpose Charging & Cooling</p>
+                            </div>
+                            <span class="text-glow-blue font-bold">$29.99</span>
+                        </div>
+                        <div class="mt-4 flex items-center">
+                            <div class="flex text-yellow-400">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <span class="ml-2 text-gray-300 text-sm">(203)</span>
+                        </div>
+
+                    </div>
+                </div>
+                <!-- Product 8 -->
+                <div class="bg-blue-900 rounded-xl shadow-md overflow-hidden card-hover stagger-delay-4">
+                    <div class="relative">
+                        <img src="ps5 desck.png" alt="PS 5 Accessory" class="w-full h-56 object-cover product-img">
+                        <div class="absolute top-3 right-3">
+
+                        </div>
+                    </div>
+                    <div class="p-4">
+                        <div class="flex justify-between items-start">
+                            <div>
+                                <h3 class="font-bold">PS 5 Charging & Cooling Deck</h3>
+                                <p class="text-gray-300 text-sm">Multipurpose Charging & Cooling</p>
+                            </div>
+                            <span class="text-glow-blue font-bold">$29.99</span>
+                        </div>
+                        <div class="mt-4 flex items-center">
+                            <div class="flex text-yellow-400">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <span class="ml-2 text-gray-300 text-sm">(203)</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+    </section>
+
+    <script>
+        // Animate on scroll
+        const faders = document.querySelectorAll('.fade-in');
+        const appearOptions = {
+            threshold: 0.1,
+            rootMargin: "0px 0px -50px 0px"
+        };
+
+        const appearOnScroll = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (!entry.isIntersecting) return;
+                entry.target.classList.add("show");
+                observer.unobserve(entry.target);
+            });
+        }, appearOptions);
+
+        faders.forEach(fader => {
+            appearOnScroll.observe(fader);
+        });
+    </script>
+    <!-- Footer -->
+    <footer class="bg-blue-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center">
+                        <div
+                            class="bg-glow-blue w-10 h-10 rounded-lg flex items-center justify-center text-white font-bold text-xl">
+                            G<span class="text-black">Z</span></div>
+                        <span class="ml-3 text-xl font-bold">Gen Z <span class="text-glow-blue">Tech</span></span>
+                    </div>
+                    <p class="mt-4 text-gray-400">Bringing premium tech to your comfort zone at prices that make sense.
+                    </p>
+                    <div class="mt-6 flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-blue-400 transition"><i
+                                class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-blue-400 transition"><i
+                                class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-blue-400 transition"><i
+                                class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-blue-400 transition"><i
+                                class="fab fa-tiktok"></i></a>
+                    </div>
+                </div>
+
+                <div>
+                    <h3 class="text-lg font-bold">Quick Links</h3>
+                    <ul class="mt-4 space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Home</a></li>
+                        <li><a href="#products" class="text-gray-400 hover:text-white transition">Products</a></li>
+                        <li><a href="#services" class="text-gray-400 hover:text-white transition">Services</a></li>
+                        <li><a href="#blog" class="text-gray-400 hover:text-white transition">Blog</a></li>
+                        <li><a href="#about" class="text-gray-400 hover:text-white transition">About Us</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3 class="text-lg font-bold">Customer Care</h3>
+                    <ul class="mt-4 space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Contact Us</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">FAQs</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Shipping Policy</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Returns & Refunds</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Privacy Policy</a></li>
+                    </ul>
+                </div>
+
+                <div id="contact">
+                    <h3 class="text-md font-semibold">Contact Us</h3>
+                    <form class="mt-2 space-y-3">
+
+                        <div>
+                            <label for="name" class="block text-xs text-gray-400 mb-1">Name</label>
+                            <input type="text" id="name"
+                                class="w-full px-2 py-1 text-sm bg-gray-800 border border-gray-700 rounded-md text-white focus:outline-none focus:ring-1 focus:ring-glow-blue transition">
+                        </div>
+                        <div>
+                            <label for="email" class="block text-xs text-gray-400 mb-1">Email</label>
+                            <input type="email" id="email"
+                                class="w-full px-2 py-1 text-sm bg-gray-800 border border-gray-700 rounded-md text-white focus:outline-none focus:ring-1 focus:ring-glow-blue transition">
+                        </div>
+                        <div>
+                            <label for="message" class="block text-xs text-gray-400 mb-1">Message</label>
+                            <textarea id="message" rows="2"
+                                class="w-full px-2 py-1 text-sm bg-gray-800 border border-gray-700 rounded-md text-white focus:outline-none focus:ring-1 focus:ring-glow-blue transition"></textarea>
+                        </div>
+                        <button type="submit"
+                            class="w-full bg-glow-blue text-white text-sm px-3 py-2 rounded-md font-medium hover:bg-blue-500 transition transform hover:scale-105">
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="mt-12 pt-8 border-t border-gray-800 text-center text-gray-500 text-sm">
+            <p><!--&copy;--> 2025 Gen Z Tech. Designed with <i class="fas fa-heart text-accent"></i> by <a
+                    class="text-white italic" href="https://jurist-jenkins.vercel.app/" target="_blank">Jurist
+                    Jenkins</a> for the next generation.</p>
+        </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('active');
+        });
+
+        // Animation on scroll
+        const animateOnScrollElements = document.querySelectorAll('.animate-on-scroll');
+        const staggerChildrenElements = document.querySelectorAll('.stagger-children');
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        });
+
+        animateOnScrollElements.forEach(el => {
+            observer.observe(el);
+        });
+
+        staggerChildrenElements.forEach(el => {
+            observer.observe(el);
+        });
+
+        // Rotating icons in categories
+        const categoryIcons = document.querySelectorAll('.card-hover .fa');
+        categoryIcons.forEach(icon => {
+            icon.addEventListener('mouseenter', () => {
+                icon.style.transform = 'rotate(360deg)';
+                icon.style.transition = 'transform 0.6s ease';
+            });
+
+            icon.addEventListener('mouseleave', () => {
+                icon.style.transform = 'rotate(0deg)';
+            });
+        });
+
+        // Counter hover effect
+        const counters = document.querySelectorAll('.counter');
+        counters.forEach(counter => {
+            counter.addEventListener('mouseenter', () => {
+                counter.style.transform = 'scale(1.1)';
+            });
+
+            counter.addEventListener('mouseleave', () => {
+                counter.style.transform = 'scale(1)';
+            });
+        });
+
+        // Hero image animation on load
+        document.addEventListener('DOMContentLoaded', () => {
+            const heroImages = document.querySelectorAll('.product-img');
+            heroImages.forEach((img, index) => {
+                setTimeout(() => {
+                    img.style.transform = 'scale(1.05)';
+                    setTimeout(() => {
+                        img.style.transform = 'scale(1)';
+                    }, 1000);
+                }, index * 300);
+            });
+        });
+
+        // Rotating background gradient
+        const waveBg = document.querySelector('.animate-wave-bg');
+        let rotation = 0;
+        setInterval(() => {
+            rotation = (rotation + 1) % 360;
+            waveBg.style.background = `linear-gradient(${rotation}deg, #e6f7ff, #c2e9ff, #99daff)`;
+            waveBg.style.backgroundSize = '600% 600%';
+        }, 100);
+    </script>
+</body>
+
+</html>
