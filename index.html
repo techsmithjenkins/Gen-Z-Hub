@@ -824,7 +824,7 @@
     </section>
 
     <!-- Call To Action -->
-    <section class="py-20 bg-gradient-to-r from-blue-600 to-blue-400 text-center text-white animate-on-scroll">
+    <section class="py-20 bg-gradient-to-r from-blue-700 to-blue-500 text-center text-white animate-on-scroll">
         <h2 class="text-4xl font-bold">Need custom designs or a sleek website?</h2>
         <p class="text-lg mt-4">We offer web & graphic design services for small businesses.</p>
         <a href="https://jurist-jenkins.vercel.app/" target="_blank"
@@ -910,63 +910,54 @@
         </div>
     </section>
 
-    <section class="mx-auto bg-gray-700 text-center animate-on-scroll rounded-t-lg">
-  <h3 class="text-xl font-semibold text-gray-100">Tell us what you think</h3>
-  <p class="text-sm text-gray-200 mt-1 mb-4">Got feedback? We’re all ears.</p>
-  
-<form class="space-y-3 text-left max-w-md mx-auto pb-4">
-  <input 
-    type="text" 
-    placeholder="Your Name" 
-    class="w-full bg-gray-100 text-sm rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500 transition"
-  />
-  
-  <textarea 
-    rows="3" 
-    placeholder="Type your feedback..."
-    class="w-full bg-gray-100 text-sm rounded-md px-4 py-2 resize-none focus:outline-none focus:ring-2 focus:ring-blue-500 transition"
-  ></textarea>
-  
-  <button 
-    type="submit"
-    class="block mx-auto my-2 px-5 py-2 bg-blue-600 text-white text-sm rounded-full hover:bg-blue-700 transition-transform hover:scale-105"
-  >
-    Submit
-  </button>
-</form>
+    <section class="relative bg-gray-900 text-center text-white animate-on-scroll overflow-hidden">
+        <!-- Background Image -->
+        <div class="absolute inset-0 bg-cover bg-center opacity-40" style="background-image: url('customers.jpeg');">
+        </div>
+        <!-- Overlay to darken and help text pop -->
+        <div class="absolute inset-0 bg-black opacity-30"></div>
 
+        <div class="relative z-10 px-4 py-10">
+            <h3 class="text-xl font-semibold">Tell us what you think</h3>
+            <p class="text-sm mt-1 mb-4">Got feedback? We’re all ears.</p>
 
-</section>
+            <form class="space-y-3 text-left max-w-md mx-auto pb-4">
+                <input type="text" placeholder="Your Name"class="w-full bg-white text-white bg-opacity-30 text-sm rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500 transition" />
+
+                <textarea rows="3" placeholder="Type your feedback..."class="w-full bg-white text-white bg-opacity-30 text-sm rounded-md px-4 py-2 resize-none focus:outline-none focus:ring-2 focus:ring-blue-500 transition"></textarea>
+
+                <button type="submit"class="block mx-auto my-2 px-5 py-2 bg-blue-600 text-white text-sm rounded-full hover:bg-blue-700 transition-transform hover:scale-105">
+                    Submit
+                </button>
+            </form>
+        </div>
+    </section>
+
 
 
 
     <!-- Newsletter -->
-<section class="py-16 bg-glow-blue text-white">
-  <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center animate-on-scroll">
-    <h2 class="text-3xl font-bold">Join Our Tech Community</h2>
-    <p class="mt-4 opacity-90 text-sm sm:text-base">
-      Subscribe to get exclusive deals, tech tips, and early access to new products
-    </p>
+    <section class="py-16 bg-glow-blue text-white">
+        <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center animate-on-scroll">
+            <h2 class="text-3xl font-bold">Join Our Tech Community</h2>
+            <p class="mt-4 opacity-90 text-sm sm:text-base">
+                Subscribe to get exclusive deals, tech tips, and early access to new products
+            </p>
 
-    <form class="mt-8 max-w-md mx-auto flex flex-col sm:flex-row gap-3 sm:gap-0">
-      <input
-        type="email"
-        placeholder="Your email address"
-        class="flex-grow px-4 py-3 rounded-lg sm:rounded-l-lg sm:rounded-r-none text-tech-black focus:outline-none text-sm"
-      />
-      <button
-        type="submit"
-        class="bg-tech-black px-6 py-3 rounded-lg sm:rounded-r-lg sm:rounded-l-none font-medium hover:bg-gray-800 transition text-sm"
-      >
-        Subscribe
-      </button>
-    </form>
+            <form class="mt-8 max-w-md mx-auto flex flex-col sm:flex-row gap-3 sm:gap-0">
+                <input type="email" placeholder="Your email address"
+                    class="flex-grow px-4 py-3 rounded-lg sm:rounded-l-lg sm:rounded-r-none text-tech-black focus:outline-none text-sm" />
+                <button type="submit"
+                    class="bg-tech-black px-6 py-3 rounded-lg sm:rounded-r-lg sm:rounded-l-none font-medium hover:bg-gray-800 transition text-sm">
+                    Subscribe
+                </button>
+            </form>
 
-    <p class="mt-4 text-xs sm:text-sm opacity-80">
-      We respect your privacy. Unsubscribe at any time.
-    </p>
-  </div>
-</section>
+            <p class="mt-4 text-xs sm:text-sm opacity-80">
+                We respect your privacy. Unsubscribe at any time.
+            </p>
+        </div>
+    </section>
 
 
     <!-- Footer -->
@@ -1054,85 +1045,91 @@
     </footer>
 
     <script>
-        // Mobile menu toggle
-        const mobileMenuButton = document.getElementById('mobile-menu-button');
-        const mobileMenu = document.getElementById('mobile-menu');
+    // Mobile menu toggle
+    const mobileMenuButton = document.getElementById('mobile-menu-button');
+    const mobileMenu = document.getElementById('mobile-menu');
 
-        mobileMenuButton.addEventListener('click', () => {
-            mobileMenu.classList.toggle('active');
+    mobileMenuButton.addEventListener('click', () => {
+        mobileMenu.classList.toggle('active');
+    });
+
+    // ✅ Auto-close mobile menu on link click
+    const mobileMenuLinks = mobileMenu.querySelectorAll('a');
+    mobileMenuLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            mobileMenu.classList.remove('active');
+        });
+    });
+
+    // Animation on scroll
+    const animateOnScrollElements = document.querySelectorAll('.animate-on-scroll');
+    const staggerChildrenElements = document.querySelectorAll('.stagger-children');
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('active');
+                observer.unobserve(entry.target);
+            }
+        });
+    }, {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+    });
+
+    animateOnScrollElements.forEach(el => observer.observe(el));
+    staggerChildrenElements.forEach(el => observer.observe(el));
+
+    // Rotating icons in categories
+    const categoryIcons = document.querySelectorAll('.card-hover .fa');
+    categoryIcons.forEach(icon => {
+        icon.addEventListener('mouseenter', () => {
+            icon.style.transform = 'rotate(360deg)';
+            icon.style.transition = 'transform 0.6s ease';
         });
 
-        // Animation on scroll
-        const animateOnScrollElements = document.querySelectorAll('.animate-on-scroll');
-        const staggerChildrenElements = document.querySelectorAll('.stagger-children');
+        icon.addEventListener('mouseleave', () => {
+            icon.style.transform = 'rotate(0deg)';
+        });
+    });
 
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('active');
-                    observer.unobserve(entry.target);
-                }
-            });
-        }, {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
+    // Counter hover effect
+    const counters = document.querySelectorAll('.counter');
+    counters.forEach(counter => {
+        counter.addEventListener('mouseenter', () => {
+            counter.style.transform = 'scale(1.1)';
         });
 
-        animateOnScrollElements.forEach(el => {
-            observer.observe(el);
+        counter.addEventListener('mouseleave', () => {
+            counter.style.transform = 'scale(1)';
         });
+    });
 
-        staggerChildrenElements.forEach(el => {
-            observer.observe(el);
-        });
-
-        // Rotating icons in categories
-        const categoryIcons = document.querySelectorAll('.card-hover .fa');
-        categoryIcons.forEach(icon => {
-            icon.addEventListener('mouseenter', () => {
-                icon.style.transform = 'rotate(360deg)';
-                icon.style.transition = 'transform 0.6s ease';
-            });
-
-            icon.addEventListener('mouseleave', () => {
-                icon.style.transform = 'rotate(0deg)';
-            });
-        });
-
-        // Counter hover effect
-        const counters = document.querySelectorAll('.counter');
-        counters.forEach(counter => {
-            counter.addEventListener('mouseenter', () => {
-                counter.style.transform = 'scale(1.1)';
-            });
-
-            counter.addEventListener('mouseleave', () => {
-                counter.style.transform = 'scale(1)';
-            });
-        });
-
-        // Hero image animation on load
-        document.addEventListener('DOMContentLoaded', () => {
-            const heroImages = document.querySelectorAll('.product-img');
-            heroImages.forEach((img, index) => {
+    // Hero image animation on load
+    document.addEventListener('DOMContentLoaded', () => {
+        const heroImages = document.querySelectorAll('.product-img');
+        heroImages.forEach((img, index) => {
+            setTimeout(() => {
+                img.style.transform = 'scale(1.05)';
                 setTimeout(() => {
-                    img.style.transform = 'scale(1.05)';
-                    setTimeout(() => {
-                        img.style.transform = 'scale(1)';
-                    }, 1000);
-                }, index * 300);
-            });
+                    img.style.transform = 'scale(1)';
+                }, 1000);
+            }, index * 300);
         });
+    });
 
-        // Rotating background gradient
-        const waveBg = document.querySelector('.animate-wave-bg');
-        let rotation = 0;
+    // Rotating background gradient
+    const waveBg = document.querySelector('.animate-wave-bg');
+    let rotation = 0;
+    if (waveBg) {
         setInterval(() => {
             rotation = (rotation + 1) % 360;
             waveBg.style.background = `linear-gradient(${rotation}deg, #e6f7ff, #c2e9ff, #99daff)`;
             waveBg.style.backgroundSize = '600% 600%';
         }, 100);
-    </script>
+    }
+</script>
+
 </body>
 
 </html>
